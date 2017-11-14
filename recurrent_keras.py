@@ -49,10 +49,13 @@ model.add(Activation('softmax'))
 model.compile(loss="categorical_crossentropy", optimizer="rmsprop")
 
 # Generate some sample before training to know how bad it is!
+<<<<<<< HEAD
 #generate_text(model, args['generate_length'], VOCAB_SIZE, ix_to_char)
 
 if not WEIGHTS == '':
   print("\nLoading weights ..\n")
+
+if not WEIGHTS == '':
   model.load_weights(WEIGHTS)
   nb_epoch = int(WEIGHTS[WEIGHTS.rfind('_') + 1:WEIGHTS.find('.')])
 else:
